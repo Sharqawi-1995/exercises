@@ -1,7 +1,7 @@
 function Profit(arr) {
   let max = arr[arr.length - 1];
   let min = arr[0];
-  for (let i = 0, j = arr.length; i <= arr.length / 2; i++, j--) {
+  for (let i = 0, j = arr.length;i<arr.length-1; i++, j--) {
     let tempI = arr[i];
     let tempJ = arr[j];
 
@@ -9,11 +9,15 @@ function Profit(arr) {
       min = tempI;
     }
 
-    if (max < tempJ) {
+    if (arr.i>=arr.j) {
+      
+    }else  if (max < tempJ) {
       max = tempJ;
     }
+
+
   }
-  console.log(min+" "+max);
+  console.log("min="+min+" "+"max="+max);
   let profit = max - min;
 
   if (profit <= 0) {
